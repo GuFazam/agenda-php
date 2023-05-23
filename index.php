@@ -18,7 +18,7 @@
         <?php
         $nome = $_GET["nome"];
         $finalizada = $_GET["finalizada"];
-        echo $nome . " - " . $finalizada;
+        echo $nome . " - " . $finalizada; //ponto concatena
 
         //dados de conexão com o banco de dados
         $servidor = "localhost";
@@ -30,7 +30,7 @@
         $conexao = mysqli_connect($servidor,$usuario_db,$senha_usuario,$banco_dados);
 
         //criar sql
-        $sql = "insert into tarefas(nome, finalizada) values('$nome', '$finalizada')";
+        $sql = "insert into tarefas(nome, finalizada) values('$nome', '$finalizada')"; //colocando o nome das variáveis no values tudo que for digitado nos inputs e salvo irá para a tabela
 
         //executar o sql no banco de dados
         mysqli_query($conexao, $sql);
